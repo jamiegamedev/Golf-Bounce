@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Golf Bounce</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>ztl8st6d00fa</unique-id>
+    <saved-with-version>18000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>400</width>
+        <height>500</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">CocoonJS native</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-type name="Ball" sid="7655953109634694">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="5178987554423825">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="3736448667063206">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="6174124430316744">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="172571221145421" speed="5">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0.53125" original-source="C:\Users\Jamie\Desktop\ball.png">
+                        <collision-poly>
+                            <point x="0.121212" y="0.210526" />
+                            <point x="0.484848" y="0" />
+                            <point x="0.848485" y="0.263158" />
+                            <point x="0.969697" y="0.473684" />
+                            <point x="0.878788" y="0.789474" />
+                            <point x="0.484848" y="1" />
+                            <point x="0.121212" y="0.789474" />
+                            <point x="0" y="0.473684" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ButtonPlay" sid="2665942910247507">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Background" sid="953656317085853">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5403016070098888" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScoreText" sid="8463788785676717">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ButtonViewTutorial" sid="9906374471482009">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Browser" sid="669069303560179">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Touch" sid="486488503983799">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="leftWall" sid="5640957753943198">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6611628985695499">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1585279882421095" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightWall" sid="3234661831573034">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1260889944373045">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4269669652340651" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="2490930736111932">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9081579865562082" speed="15">
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.46875" original-source="C:\Users\Jamie\Desktop\tap1.png" />
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.4375" original-source="C:\Users\Jamie\Desktop\tap2.png" />
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.25" original-source="C:\Users\Jamie\Desktop\tap3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder expanded="1">
+        <layout>Start.xml</layout>
+        <layout>Game.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>Game events.xml</event-sheet>
+        <event-sheet>Start events.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Browser" uid="11" />
+        <global-instance type="Touch" uid="12">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="0">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
