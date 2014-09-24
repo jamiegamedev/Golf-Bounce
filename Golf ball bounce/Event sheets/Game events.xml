@@ -3,8 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game events</name>
     <events>
+        <variable constant="0" name="ten" sid="9951116347084245" static="0" type="number">10</variable>
+        <variable constant="0" name="balls" sid="1567978282046454" static="0" type="number">1</variable>
         <variable constant="1" name="SecondsPerObstacle" sid="1617386090584892" static="0" type="number">1</variable>
-        <variable constant="1" name="JUMPSTRENGTH" sid="6706328064360653" static="0" type="number">400</variable>
+        <variable constant="1" name="JUMPSTRENGTH" sid="6706328064360653" static="0" type="number">500</variable>
         <variable comment="in pixels per second" constant="1" name="SCROLLSPEED" sid="218429142858833" static="0" type="number">300</variable>
         <variable constant="0" name="Score" sid="1620992456180981" static="0" type="number">0</variable>
         <event-group description="" sid="2140906227666016" title="Start">
@@ -133,8 +135,23 @@
                         <condition id="-4" name="Is outside layout" sid="3705447759395651" type="Ball" />
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="8628296172319708" type="System">
-                            <param id="0" name="Layout">Start</param>
+                        <action id="-9" name="Destroy" sid="6508834298412794" type="Ball" />
+                        <action id="-3" name="Set position" sid="4866920520309806" type="Sprite3">
+                            <param id="0" name="X">184</param>
+                            <param id="1" name="Y">200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3859752962734976" type="Play">
+                            <param id="0" name="X">96</param>
+                            <param id="1" name="Y">576</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="7441111700717254" type="menuButton">
+                            <param id="0" name="X">260</param>
+                            <param id="1" name="Y">572</param>
+                        </action>
+                        <action id="3" name="Submit score" sid="3365091599459052" type="GooglePlay">
+                            <param id="0" name="Leaderboard ID">&quot;CgkI_83NlpAKEAIQAA&quot;</param>
+                            <param id="1" name="Score">Score</param>
+                            <param id="2" name="Tag">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -170,6 +187,126 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="X">Touch.X</param>
                     <param id="3" name="Y">touch.y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8680801692432823">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="477068330923048" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1886984136897184" type="Ball">
+                    <param id="0" name="Animation">&quot;black&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Unlock" sid="8320220127109856" type="GooglePlay">
+                    <param id="0" name="Achievement ID">&quot;CgkI_83NlpAKEAIQAQ&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1148387900119801">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6910285749773267" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1051924757098319" type="Ball">
+                    <param id="0" name="Animation">&quot;yellow&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Unlock" sid="7113351400039069" type="GooglePlay">
+                    <param id="0" name="Achievement ID">&quot;CgkI_83NlpAKEAIQAg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1358410437969122">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7281302292076885" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3376216156696839" type="Ball">
+                    <param id="0" name="Animation">&quot;blue&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Unlock" sid="9701598005638824" type="GooglePlay">
+                    <param id="0" name="Achievement ID">&quot;CgkI_83NlpAKEAIQAw&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4005715421393387">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4360379493846021" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">250</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7305589471606423" type="Ball">
+                    <param id="0" name="Animation">&quot;pink&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Unlock" sid="7274552028064976" type="GooglePlay">
+                    <param id="0" name="Achievement ID">&quot;CgkI_83NlpAKEAIQBA&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8657538347387279">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2190724739694906" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1000</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4514498981884083" type="Ball">
+                    <param id="0" name="Animation">&quot;all&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="8" name="Unlock" sid="3964418992432751" type="GooglePlay">
+                    <param id="0" name="Achievement ID">&quot;CgkI_83NlpAKEAIQBQ&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7936498073513801">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2868570607479529" type="Touch">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="617314580555708" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="5897840286138428" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="7688753362833229">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6305655833196363" type="Touch">
+                    <param id="0" name="Object">menuButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Request hi-scores" sid="7035921190369488" type="GooglePlay">
+                    <param id="0" name="Leaderboard ID">&quot;CgkI_83NlpAKEAIQAA&quot;</param>
+                    <param id="1" name="Collection">0</param>
+                    <param id="2" name="Time span">0</param>
+                    <param id="3" name="Results">25</param>
+                    <param id="4" name="Type">0</param>
                 </action>
             </actions>
         </event-block>
